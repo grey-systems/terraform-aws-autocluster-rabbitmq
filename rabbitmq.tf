@@ -202,7 +202,7 @@ resource "aws_route53_record" "rabbitma-dns" {
   count   = "${var.route53_zone_id == "" ? 0 : 1}"
   zone_id = "${var.route53_zone_id}"
   name    = "${var.rabbitmq_dns_name}"
-  type    = "CNMAME"
+  type    = "CNAME"
   ttl     = "300"
   records = ["${aws_elb.rabbitmq_elb.dns_name}"]
 }
