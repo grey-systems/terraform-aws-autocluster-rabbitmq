@@ -48,7 +48,7 @@ Module usage:
 
     # minimal setup, check Inputs to see the different customisation options
      module "rabbitmq" {
-         source                                = "/Users/jmfelguera/Documents/repos/greysystems-github/terraform-aws-rabbitmq"
+         source                                = "github.com/grey-systems/terraform-multitier-vpc.git?ref=master"
          subnet_ids                            = "${var.subnet_ids}"
          availability_zones                    = "${var.availability_zones}"
          aws_keypair_name                      = "${var.aws_keypair_name}"
